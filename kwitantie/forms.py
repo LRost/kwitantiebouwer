@@ -1,7 +1,7 @@
 from django import forms
 from .models import Kwitantie
-from .input_fields import hour_list, tarief_dict
-
+from .input_fields import tarief_dict
+from .hour_list import hours_tuple
 
 class KwitantieAanmaken(forms.Form):
     project = forms.CharField()
@@ -11,7 +11,7 @@ class KwitantieAanmaken(forms.Form):
                                    required=True,
                                    max_length=700)
     aantal_uren = forms.ChoiceField(label='aantal minuten',
-                                    choices=hour_list()
+                                    choices=hours_tuple()
                                     )
     naam = forms.CharField(label='Naam of bedrijfsnaam',
                            widget=forms.TextInput(
