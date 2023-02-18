@@ -1,0 +1,6 @@
+Django
+fpdf2
+gunicorn
+django-crispy-forms
+fpdf
+python-gitlab

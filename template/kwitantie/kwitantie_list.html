@@ -1,0 +1,46 @@
+{% extends 'kwitantie/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row" id="artikel-row">
+    <div class="col-md-6" align="center">
+        <a href="/nieuwe-kwitantie" target="_self">
+            <button class="btn btn-success mt-2 ml-5" role="button">
+                nieuwe kwitantie
+            </button>
+        </a>
+    </div>
+</div>
+<table class="table table-hover table-striped table-borderless" data-toolbar="#filter-links" data-toggle="table">
+    <thead>
+        <tr>
+            <th>kwitantienummer</th>
+            <th>beschrijving</th>
+            <th>project</th>
+            <th>Uren</th>
+            <th>Tarief</th>
+            <th>Dienst</th>
+            <th>link</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for kwitantie in object_list %}
+        <tr>
+            <td>{{ kwitantie.kwitantienummer }}</td>
+            <td>{{ kwitantie.beschrijving }}</td>
+            <td>{{ kwitantie.project }}</td>
+            <td>{{ kwitantie.aantal_uren }}</td>
+            <td>{{ kwitantie.bedrag }}</td>
+            <td>{{ kwitantie.dienst }}</td>
+            <td>
+                <a href="{{ kwitantie.id }}" target="_self">
+                    <button class="btn btn-success mt-2 ml-5" role="button">
+                    PDF
+                    </button>
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
