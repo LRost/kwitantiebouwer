@@ -9,7 +9,11 @@ Clone the repository, populate the default values in kwitantie/input_field.py wi
 ~~~
 python manage.py migrate
 ~~~
-2. Start the server
+2. Install all the dependencies
+~~~
+pip install -r requirements.txt
+~~~
+3. Start the server
 ~~~
 python manage.py runserver
 ~~~

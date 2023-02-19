@@ -6,48 +6,24 @@
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <h1>Nieuwe kwitantie</h1><br><br>
-        <div class="form-row" id="artikel-row">
+
+        <div class="row">
             <div class="form-group col-md-4 mb-0">
                 {{ form.project|as_crispy_field }}
-            </div>
-            <div class="form-group col-md-4 mb-0">
                 {{ form.tarief|as_crispy_field }}
-            </div>
-            <div class="form-group col-md-4 mb-0">
                 {{ form.aantal_uren|as_crispy_field }}
-            </div>
-        </div>
-
-        <div class="form-row" id="artikel-row">
-            <div class="form-group col-md-4 mb-0">
                 {{ form.beschrijving|as_crispy_field }}
             </div>
-
-            <div class="form-group col-md-8 mb-0">
-                {{ form.naam|as_crispy_field }}
-        <div class="form-row">
-            <div class="form-group col-md-8 mb-0">
-                {{ form.straat|as_crispy_field }}
-            </div>
-            <div class="form-group col-md-2 mb-0">
-                {{ form.nummer|as_crispy_field }}
-            </div>
-        </div>
-        <div class="form-row">
             <div class="form-group col-md-4 mb-0">
+                {{ form.naam|as_crispy_field }}
+                {{ form.straat|as_crispy_field }}
+                {{ form.nummer|as_crispy_field }}
                 {{ form.postcode|as_crispy_field }}
-            </div>
-            <div class="form-group col-md-8 mb-0">
                 {{ form.plaats|as_crispy_field }}
+                {{ form.land|as_crispy_field }}
             </div>
-            {{ form.land|as_crispy_field }}
+
         </div>
-            </div>
-        </div>
-
-
-
-
         <br>
         <button type="submit" class="btn btn-success">Submit</button>
     </form>

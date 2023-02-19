@@ -1,6 +1,7 @@
-Django
+Django>=4
 fpdf2
 gunicorn
-django-crispy-forms
+django-crispy-forms>=2
 fpdf
 python-gitlab
+django-bootstrap5
